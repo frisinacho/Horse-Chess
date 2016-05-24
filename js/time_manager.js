@@ -8,15 +8,17 @@ function StartTime(){
 		seconds ++;
 
 		secs = seconds;
-		min = 0;
+		mins = 0;
 
 		while(secs>60){
 			mins++;
 			secs -= 60;
 		}
 
-		s.innerHTML = secs;
-		m.innerHTML = mins;
+		if (mins<10)m.innerHTML = "0" + mins;
+		else m.innerHTML = mins;
+		if (secs<10)s.innerHTML = "0" + secs;
+		else s.innerHTML = secs;
 
 		Total_secs = secs;
 		Total_mins = mins;
