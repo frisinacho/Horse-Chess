@@ -1,3 +1,8 @@
+function ResetTime() {
+	clearInterval(cronometer);
+}
+
+
 function StartTime(){
 
 	seconds = 0;

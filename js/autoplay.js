@@ -4,6 +4,7 @@ var cronometer;
 
 function autoplay(){
 
+	ResetTime();
 	StartTime();
 }
 
