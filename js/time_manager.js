@@ -18,5 +18,8 @@ function StartTime(){
 		s.innerHTML = secs;
 		m.innerHTML = mins;
 
+		Total_secs = secs;
+		Total_mins = mins;
+
 	},1000);
 }
