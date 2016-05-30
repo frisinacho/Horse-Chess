@@ -12,6 +12,9 @@ function autoplay(){
 
 	ResetTime();
 	StartTime();
+
+	x = Math.round(Math.random()*7);
+	y = Math.round(Math.random()*7);
 }
 
 autoplay();
