@@ -2,7 +2,13 @@ var Total_secs;
 var Total_mins;
 var cronometer;
 
-var board = new Aray(8);
+var board = new Array(8);
+
+function SelectCell(x, y){
+
+	board[x][y] = 1;
+	PaintCell(x, y, "green");
+}
 
 function autoplay(){
 
@@ -15,6 +21,8 @@ function autoplay(){
 
 	x = Math.round(Math.random()*7);
 	y = Math.round(Math.random()*7);
+
+	SelectCell(x, y);
 }
 
 autoplay();
