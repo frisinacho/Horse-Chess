@@ -11,6 +11,10 @@ function SelectCell(x, y){
 	PaintHorseCell(x, y, "green");
 }
 
+function CheckCell(x, y){
+	SelectCell(x, y);
+}
+
 function autoplay(){
 
 	for (i=0; i<8; i++) board[i] = new Array(8);
