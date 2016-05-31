@@ -4,11 +4,16 @@ var cronometer;
 
 var board = new Array(8);
 
+var CellSelected_x;
+var CellSelected_y;
+
 function SelectCell(x, y){
 
 	board[x][y] = 1;
-	PaintCell(x, y, "green");
+	PaintCell(CellSelected_x, CellSelected_y, "orange");
 	PaintHorseCell(x, y, "green");
+	CellSelected_x = x;
+	CellSelected_y = y;
 }
 
 function CheckCell(x, y){
@@ -26,6 +31,9 @@ function autoplay(){
 
 	x = Math.round(Math.random()*7);
 	y = Math.round(Math.random()*7);
+
+	CellSelected_x = x;
+	CellSelected_y = y;
 
 	SelectCell(x, y);
 }
