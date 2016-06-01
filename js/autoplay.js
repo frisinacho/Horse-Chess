@@ -17,7 +17,9 @@ function SelectCell(x, y){
 }
 
 function CheckCell(x, y){
-	SelectCell(x, y);
+	CheckTrue = false;
+
+	if (CheckTrue) SelectCell(x, y);
 }
 
 function autoplay(){
