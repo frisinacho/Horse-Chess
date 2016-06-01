@@ -32,6 +32,7 @@ function CheckCell(x, y){
 	if (dif_x == -1 && dif_y == -2) CheckTrue = true;	// left - bottom long
 	if (dif_x == -2 && dif_y == -1) CheckTrue = true;	// left long - bottom
 
+	if (board[x][y] == 1) CheckTrue = false;
 	if (CheckTrue) SelectCell(x, y);
 }
 
