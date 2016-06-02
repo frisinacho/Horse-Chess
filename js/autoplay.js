@@ -7,6 +7,12 @@ var board = new Array(8);
 var CellSelected_x;
 var CellSelected_y;
 
+function Check_SuccessfullEnd(){
+	SuccessfullEnd = true;
+	if (Moves > 0) SuccessfullEnd = false;
+	if (SuccessfullEnd) alert("You win!");
+}
+
 function SelectCell(x, y){
 
 	Moves--;
@@ -17,6 +23,8 @@ function SelectCell(x, y){
 	PaintHorseCell(x, y, "green");
 	CellSelected_x = x;
 	CellSelected_y = y;
+
+	Check_SuccessfullEnd();
 }
 
 function CheckCell(x, y){
