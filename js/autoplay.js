@@ -2,6 +2,9 @@ var Total_secs;
 var Total_mins;
 var cronometer;
 
+var Moves;
+var Options;
+
 var board = new Array(8);
 
 var CellSelected_x;
@@ -11,6 +14,32 @@ function Check_SuccessfullEnd(){
 	SuccessfullEnd = true;
 	if (Moves > 0) SuccessfullEnd = false;
 	if (SuccessfullEnd) alert("You win!");
+}
+
+function Check_GameOver(x, y){
+	Options = 0;
+
+	Check_Moves(x, y, 1, 2);	// Check move right - top long
+	Check_Moves(x, y, 2, 1);	// Check move right long - top
+	Check_Moves(x, y, 1, -2);	// Check move right - bottom long
+	Check_Moves(x, y, 2, -1);	// Check move right long - bottom
+
+	Check_Moves(x, y, -1, 2);	// Check move left - top long
+	Check_Moves(x, y, -2, 1);	// Check move left long - top 
+	Check_Moves(x, y, -1, -2);	// Check move left - bottom long
+	Check_Moves(x, y, -2, -1);	// Check move left long - bottom
+
+	document.getElementById("options").innerHTML = Options;
+	if (!Options) alert("Game Over");
+}
+
+function Check_Moves(x, y, mov_x, mov_y){
+	option_x = x + mov_x;
+	option_y = y + mov_y;
+
+	if (option_x < 8 && option_y < 8 && option_x >= 0 && option_y >= 0){
+		if (board[option_x][option_y] == 0) Options++;
+	}
 }
 
 function SelectCell(x, y){
@@ -25,6 +54,7 @@ function SelectCell(x, y){
 	CellSelected_y = y;
 
 	Check_SuccessfullEnd();
+	Check_GameOver(x, y);
 }
 
 function CheckCell(x, y){
