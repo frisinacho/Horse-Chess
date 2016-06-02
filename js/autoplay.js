@@ -9,6 +9,9 @@ var CellSelected_y;
 
 function SelectCell(x, y){
 
+	Moves--;
+	document.getElementById("moves").innerHTML = Moves;
+
 	board[x][y] = 1;
 	PaintCell(CellSelected_x, CellSelected_y, "orange");
 	PaintHorseCell(x, y, "green");
@@ -37,6 +40,8 @@ function CheckCell(x, y){
 }
 
 function autoplay(){
+
+	Moves = 64;
 
 	for (i=0; i<8; i++) board[i] = new Array(8);
 
