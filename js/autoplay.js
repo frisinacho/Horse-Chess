@@ -5,6 +5,7 @@ var cronometer;
 var Moves_Required;
 var Moves;
 var Options;
+var Bonus;
 
 var board = new Array(8);
 
@@ -48,9 +49,15 @@ function SelectCell(x, y){
 	Moves--;
 	document.getElementById("moves").innerHTML = Moves;
 
-	board[x][y] = 1;
 	PaintCell(CellSelected_x, CellSelected_y, "orange");
 	PaintHorseCell(x, y, "green");
+
+	if (board[x][y] == 2){
+		Bonus++;
+		document.getElementById("bonus").innerHTML = "+" + Bonus;
+	}
+
+	board[x][y] = 1;
 	CellSelected_x = x;
 	CellSelected_y = y;
 
@@ -104,6 +111,7 @@ function autoplay(){
 
 	Moves = 64;
 	Moves_Required = 8;
+	Bonus = 0;
 
 	for (i=0; i<8; i++) board[i] = new Array(8);
 
