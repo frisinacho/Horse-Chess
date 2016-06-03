@@ -61,7 +61,22 @@ function SelectCell(x, y){
 
 function Check_newBonus(){
 	if ((64-Moves) % Moves_Required == 0){
-		alert("You're going to get a bonus");
+		// Check a random cell for the Bonus
+		Bonus_cell = false;
+		while (Bonus_cell == false){
+
+			Bonus_cell_x = Math.round(Math.random() * 7);
+			Bonus_cell_y = Math.round(Math.random() * 7);
+
+			if (board[Bonus_cell_x][Bonus_cell_y] == 0)
+				Bonus_cell = true;
+		}
+
+		// In board[][] = 2
+		board[Bonus_cell_x][Bonus_cell_y] = 2;
+
+		// Draw bonus
+		PaintBonusCell(Bonus_cell_x, Bonus_cell_y);
 	}
 }
 
