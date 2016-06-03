@@ -2,6 +2,7 @@ var Total_secs;
 var Total_mins;
 var cronometer;
 
+var Moves_Required;
 var Moves;
 var Options;
 
@@ -55,6 +56,13 @@ function SelectCell(x, y){
 
 	Check_SuccessfullEnd();
 	Check_GameOver(x, y);
+	Check_newBonus();
+}
+
+function Check_newBonus(){
+	if ((64-Moves) % Moves_Required == 0){
+		alert("You're going to get a bonus");
+	}
 }
 
 function CheckCell(x, y){
@@ -80,6 +88,7 @@ function CheckCell(x, y){
 function autoplay(){
 
 	Moves = 64;
+	Moves_Required = 8;
 
 	for (i=0; i<8; i++) board[i] = new Array(8);
 
@@ -98,3 +107,7 @@ function autoplay(){
 }
 
 autoplay();
+
+// 0 -> Empty
+// 1 -> Occupied
+// 2 -> Bonus
