@@ -53,6 +53,8 @@ function SelectCell(x, y){
 	Moves--;
 	document.getElementById("moves").innerHTML = Moves;
 
+	Grow_MeterBonus();
+
 	PaintCell(CellSelected_x, CellSelected_y, "orange");
 	PaintHorseCell(x, y, "green");
 
@@ -69,6 +71,17 @@ function SelectCell(x, y){
 	Check_SuccessfullEnd();
 	Check_GameOver(x, y);
 	Check_newBonus();
+}
+
+function Grow_MeterBonus(){
+	moves_done = 64 - Moves;
+	bonus_done = Math.floor(moves_done / Moves_Required);
+	moves_rest = Moves_Required * bonus_done;
+	bonus_grow = moves_done - moves_rest;
+
+	width_meter = bonus_grow * 168 / Moves_Required;
+
+	document.getElementById("meter_bonus").style.width = width_meter + "px";
 }
 
 function Check_newBonus(){
