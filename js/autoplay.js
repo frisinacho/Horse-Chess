@@ -7,6 +7,10 @@ var Moves;
 var Options;
 var Bonus;
 
+var Level = 1;
+var Lifes = 1;
+var Level_Moves;
+
 var board = new Array(8);
 
 var CellSelected_x;
@@ -137,9 +141,7 @@ function CheckCell(x, y){
 
 function autoplay(){
 
-	Moves = 64;
-	Moves_Required = 8;
-	Bonus = 0;
+	setLevel_Parameters();
 
 	for (i=0; i<8; i++) board[i] = new Array(8);
 
