@@ -134,12 +134,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#514200', end
 	text-align: left;
 	padding-left: 10px;
 }
-#title #scores .score #options,
+#title #scores .score #global_options,
 #title #scores .score #moves, 
 #title #scores .score #time{
 	font-size: 2em;
 	margin: -20px 0px 0px 0px;
 
+}
+
+#title #scores .score #bonus{
+	color: red;
 }
 
 
