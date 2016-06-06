@@ -21,3 +21,12 @@ function PaintBonusCell(x, y){
 	cell = document.getElementById("c"+x+y);
 	cell.innerHTML  = "<img src='bonus.gif'></img>";
 }
+
+function setBoard(){
+	if (Level == 2) PaintLevel_2();
+	if (Level == 3) PaintLevel_3();
+	if (Level == 4) PaintLevel_4();
+	if (Level == 5) PaintLevel_5();
+	if (Level == 6) PaintLevel_6();
+	// Level7 will be the same as Level1 but without bonus.
+}
