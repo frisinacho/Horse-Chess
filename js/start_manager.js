@@ -10,7 +10,7 @@ function setLifes(){
 
 function set_LevelMoves(){
 	if (Level == 1) Level_Moves = 64;
-	if (Level == 2) Level_Moves = 4;
+	if (Level == 2) Level_Moves = 56;
 	if (Level == 3) Level_Moves = 3;
 	if (Level == 4) Level_Moves = 3;
 	if (Level == 5) Level_Moves = 4;

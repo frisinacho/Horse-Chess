@@ -37,3 +37,7 @@ function Paint_Column(column){
 		PaintHorseCell(column, i, "orange");
 	}
 }
+
+function PaintLevel_2(){
+	Paint_Column(6);
+}
