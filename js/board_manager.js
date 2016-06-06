@@ -41,3 +41,7 @@ function Paint_Column(column){
 function PaintLevel_2(){
 	Paint_Column(6);
 }
+
+function PaintLevel_3(){
+	for (j=4; j<8; j++) Paint_Column(j);
+}
