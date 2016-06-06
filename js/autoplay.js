@@ -78,7 +78,7 @@ function SelectCell(x, y){
 }
 
 function Grow_MeterBonus(){
-	moves_done = 64 - Moves;
+	moves_done = Level_Moves - Moves;
 	bonus_done = Math.floor(moves_done / Moves_Required);
 	moves_rest = Moves_Required * bonus_done;
 	bonus_grow = moves_done - moves_rest;
@@ -89,7 +89,7 @@ function Grow_MeterBonus(){
 }
 
 function Check_newBonus(){
-	if ((64-Moves) % Moves_Required == 0){
+	if ((Level_Moves-Moves) % Moves_Required == 0){
 		// Check a random cell for the Bonus
 		Bonus_cell = false;
 		while (Bonus_cell == false){
