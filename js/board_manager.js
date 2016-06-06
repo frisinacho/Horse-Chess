@@ -46,6 +46,11 @@ function PaintLevel_3(){
 	for (j=4; j<8; j++) Paint_Column(j);
 }
 
+function PaintLevel_4(){
+	PaintLevel_3();
+	PaintLevel_5();
+}
+
 function PaintLevel_5(){
 	for (i=0; i<4; i++){
 		for (j=0; j<4; j++){
