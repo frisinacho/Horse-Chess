@@ -42,7 +42,7 @@ body{
 	display: inline-block;
 	background-image: url(../horse.gif);
 	position: relative;
-;}
+}
 #board .row .cell:hover{
 	box-shadow: inset 0px 0px 6px green,
 				inset 0px 0px 2px green,
