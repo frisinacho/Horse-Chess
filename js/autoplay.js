@@ -10,6 +10,7 @@ var Bonus;
 var Level = 1;
 var Lifes = 1;
 var Level_Moves;
+var Next_Level = false;
 
 var board = new Array(8);
 

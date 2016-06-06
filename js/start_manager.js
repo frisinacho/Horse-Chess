@@ -30,8 +30,21 @@ function set_Moves_Required(){
 
 function setLevel_Parameters(){
 
-	Moves = 64;
-	Moves_Required = 8;
+	if (Next_Level){
+		Level++;
+		setLifes();
+	}
+	else{
+		Lifes--;
+		if (Lifes == 0){
+			Level = 1;
+			Lifes = 1;
+		}
+	}
+
+	document.getElementById("level").innerHTML = Level;
+	document.getElementById("lifes").innerHTML = Lifes;
+
 	Bonus = 0;
 	document.getElementById("bonus").innerHTML = "";
 
