@@ -30,3 +30,10 @@ function setBoard(){
 	if (Level == 6) PaintLevel_6();
 	// Level7 will be the same as Level1 but without bonus.
 }
+
+function Paint_Column(column){
+	for (i=0; i<8; i++){
+		board[column][i] = 1;
+		PaintHorseCell(column, i, "orange");
+	}
+}
