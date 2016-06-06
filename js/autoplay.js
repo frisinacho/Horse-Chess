@@ -152,8 +152,12 @@ function autoplay(){
 	ResetTime();
 	StartTime();
 
-	x = Math.round(Math.random()*7);
-	y = Math.round(Math.random()*7);
+	First_Position = false;
+	while (First_Position == false){
+		x = Math.round(Math.random()*7);
+		y = Math.round(Math.random()*7);
+		if (board[x][y] == 0) First_Position = true;
+	}
 
 	CellSelected_x = x;
 	CellSelected_y = y;
