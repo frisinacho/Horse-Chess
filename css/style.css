@@ -136,7 +136,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#514200', end
 }
 #title #scores .score #global_options,
 #title #scores .score #moves, 
-#title #scores .score #time{
+#title #scores .score #time,
+#title #scores .score #lifes,
+#title #scores .score #level{
 	font-size: 2em;
 	margin: -20px 0px 0px 0px;
 
