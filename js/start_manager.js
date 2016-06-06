@@ -48,4 +48,7 @@ function setLevel_Parameters(){
 	Bonus = 0;
 	document.getElementById("bonus").innerHTML = "";
 
+	set_LevelMoves();
+	Moves = Level_Moves;
+	set_Moves_Required();
 }
