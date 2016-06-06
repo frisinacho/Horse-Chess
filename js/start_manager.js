@@ -18,6 +18,16 @@ function set_LevelMoves(){
 	if (Level == 7) Level_Moves = 5;
 }
 
+function set_Moves_Required(){
+	if (Level == 1) Moves_Required = 8;
+	if (Level == 2) Moves_Required = 10;
+	if (Level == 3) Moves_Required = 12;
+	if (Level == 4) Moves_Required = 10;
+	if (Level == 5) Moves_Required = 10;
+	if (Level == 6) Moves_Required = 12;
+	if (Level == 7) Moves_Required = 1000;
+}
+
 function setLevel_Parameters(){
 
 	Moves = 64;
