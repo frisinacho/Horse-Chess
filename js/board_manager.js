@@ -66,3 +66,8 @@ function PaintLevel_5(){
 		}
 	}
 }
+
+function PaintLevel_6(){
+	Paint_Column(0);	Paint_Row(0);
+	Paint_Column(7);	Paint_Row(7);
+}
