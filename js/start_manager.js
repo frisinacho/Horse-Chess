@@ -15,7 +15,7 @@ function set_LevelMoves(){
 	if (Level == 4) Level_Moves = 16;
 	if (Level == 5) Level_Moves = 48;
 	if (Level == 6) Level_Moves = 36;
-	if (Level == 7) Level_Moves = 5;
+	if (Level == 7) Level_Moves = 64;
 }
 
 function set_Moves_Required(){
