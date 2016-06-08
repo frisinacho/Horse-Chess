@@ -31,6 +31,13 @@ function setBoard(){
 	// Level7 will be the same as Level1 but without bonus.
 }
 
+function Paint_Row(row){
+	for (i=0; i<8; i++){
+		board[i][row] = 1;
+		PaintHorseCell(i, row, "orange");
+	}
+}
+
 function Paint_Column(column){
 	for (i=0; i<8; i++){
 		board[column][i] = 1;
