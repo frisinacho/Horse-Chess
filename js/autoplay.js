@@ -8,7 +8,7 @@ var Options;
 var Bonus;
 
 var Level = 1;
-var Lifes = 1;
+var Lifes = 5;
 var Level_Moves;
 var Next_Level = false;
 
@@ -21,7 +21,7 @@ var CheckCell_Required;
 function Check_SuccessfullEnd(){
 	SuccessfullEnd = true;
 	if (Moves > 0) SuccessfullEnd = false;
-	if (SuccessfullEnd) alert("You win!");
+	if (SuccessfullEnd) ShowMessage("You Win!", false);
 }
 
 function Check_GameOver(x, y){
@@ -40,7 +40,7 @@ function Check_GameOver(x, y){
 	document.getElementById("options").innerHTML = Options;
 	if (!Options){
 		if (Bonus) CheckCell_Required = false
-		else alert("Game Over");
+		else ShowMessage("Game Over!", true);
 	}
 }
 
