@@ -200,6 +200,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#514200', end
 	color:#1B190F;
 	margin-top: 300px;
 }
+#message p#data_message{
+	font-size: 4em;
+	font-weight: bolder;
+	color:#1B190F;
+	margin-top: -50px;
+}
 
 
 @media screen and (min-width: 430px){
