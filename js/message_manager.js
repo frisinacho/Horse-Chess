@@ -10,7 +10,7 @@ function ShowMessage(string_notification, game_over){
 
 	}
 	else{
-
+		string_score = "Score: " + (Level_Moves-Moves) + "/" + Level_Moves;
 	}
 
 	Message = document.getElementById("message");
