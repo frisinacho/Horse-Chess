@@ -1,4 +1,6 @@
 function ShowMessage(string_notification, game_over){
+	ResetTime();
+
 	Next_Level = !game_over;
 
 	if (game_over == false){
