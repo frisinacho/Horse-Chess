@@ -90,7 +90,7 @@ function Grow_MeterBonus(){
 }
 
 function Check_newBonus(){
-	if ((Level_Moves-Moves) % Moves_Required == 0){
+	if ((Level_Moves-Moves) % Moves_Required == 0 && Moves > 0){
 		// Check a random cell for the Bonus
 		Bonus_cell = false;
 		while (Bonus_cell == false){
