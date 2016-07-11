@@ -150,7 +150,7 @@ function autoplay(){
 	setBoard();
 
 	ResetTime();
-	StartTime();
+	setTimeout("StartTime()", 2000);
 
 	First_Position = false;
 	while (First_Position == false){
