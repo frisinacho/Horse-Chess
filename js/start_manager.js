@@ -46,6 +46,7 @@ function setLevel_Parameters(){
 	document.getElementById("lifes").innerHTML = Lifes;
 
 	ShowWelcome();
+	setTimeout("hide_message(false)",2000);
 
 	Bonus = 0;
 	document.getElementById("bonus").innerHTML = "";

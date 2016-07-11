@@ -1,3 +1,10 @@
+function hide_message(restart){
+	Message = document.getElementById("message");
+	Message.style.display = "none";
+
+	if (restart) autoplay();
+}
+
 function ShowMessage(string_notification, game_over){
 	ResetTime();
 
@@ -35,8 +42,10 @@ function ShowWelcome() {
 	Message_Notification = document.getElementById("data_message");
 	Message_Notification.innerHTML = "Lifes: " + Lifes;
 
+	/*
 	Message_Notification = document.getElementById("share_panel");
 	Message_Notification.display.style = "none";
+	*/
 
 	document.getElementById("seconds").innerHTML = "00";
 	document.getElementById("minutes").innerHTML = "00";
