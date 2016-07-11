@@ -45,6 +45,8 @@ function setLevel_Parameters(){
 	document.getElementById("level").innerHTML = Level;
 	document.getElementById("lifes").innerHTML = Lifes;
 
+	ShowWelcome();
+
 	Bonus = 0;
 	document.getElementById("bonus").innerHTML = "";
 

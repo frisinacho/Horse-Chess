@@ -24,3 +24,20 @@ function ShowMessage(string_notification, game_over){
 	Message_Notification = document.getElementById("data_message");
 	Message_Notification.innerHTML = string_score;
 }
+
+function ShowWelcome() {
+	Message = document.getElementById("message");
+	Message.style.display = "block";
+
+	Message_Notification = document.getElementById("notification");
+	Message_Notification.innerHTML = "Level: " + Level;
+
+	Message_Notification = document.getElementById("data_message");
+	Message_Notification.innerHTML = "Lifes: " + Lifes;
+
+	Message_Notification = document.getElementById("share_panel");
+	Message_Notification.display.style = "none";
+
+	document.getElementById("seconds").innerHTML = "00";
+	document.getElementById("minutes").innerHTML = "00";
+}
