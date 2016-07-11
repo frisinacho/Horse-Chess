@@ -5,7 +5,7 @@ function hide_message(restart){
 	if (restart) autoplay();
 }
 
-function ShowMessage(string_notification, game_over){
+function ShowMessage(string_notification, string_button, game_over){
 	ResetTime();
 
 	Next_Level = !game_over;
@@ -30,6 +30,12 @@ function ShowMessage(string_notification, game_over){
 
 	Message_Notification = document.getElementById("data_message");
 	Message_Notification.innerHTML = string_score;
+
+	Message_Notification = document.getElementById("button");
+	Message_Notification.innerHTML = string_button;
+
+	Message_Notification = document.getElementById("share_panel");
+	Message_Notification.style.display = "block";
 }
 
 function ShowWelcome() {
@@ -41,11 +47,6 @@ function ShowWelcome() {
 
 	Message_Notification = document.getElementById("data_message");
 	Message_Notification.innerHTML = "Lifes: " + Lifes;
-
-	/*
-	Message_Notification = document.getElementById("share_panel");
-	Message_Notification.display.style = "none";
-	*/
 
 	document.getElementById("seconds").innerHTML = "00";
 	document.getElementById("minutes").innerHTML = "00";

@@ -21,7 +21,7 @@ var CheckCell_Required;
 function Check_SuccessfullEnd(){
 	SuccessfullEnd = true;
 	if (Moves > 0) SuccessfullEnd = false;
-	if (SuccessfullEnd) ShowMessage("You Win!", false);
+	if (SuccessfullEnd) ShowMessage("You Win!", "Next Level", false);
 }
 
 function Check_GameOver(x, y){
@@ -40,7 +40,7 @@ function Check_GameOver(x, y){
 	document.getElementById("options").innerHTML = Options;
 	if (!Options){
 		if (Bonus) CheckCell_Required = false
-		else ShowMessage("Game Over!", true);
+		else ShowMessage("Game Over!", "Try Again!", true);
 	}
 }
 
